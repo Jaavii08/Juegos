@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orbe Astral: El Reto del Guardián</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="ui">
+    <header>
+      <h1>Orbe Astral</h1>
+      <p>Protege el núcleo, esquiva meteoros y domina el tiempo.</p>
+    </header>
+
+    <section class="panel">
+      <div class="scoreboard">
+        <div>
+          <span class="label">Puntaje</span>
+          <span id="score">0</span>
+        </div>
+        <div>
+          <span class="label">Racha</span>
+          <span id="streak">0</span>
+        </div>
+        <div>
+          <span class="label">Integridad</span>
+          <span id="integrity">100%</span>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="startButton">Iniciar misión</button>
+        <button id="pauseButton" disabled>Pausar</button>
+        <button id="restartButton">Reiniciar</button>
+      </div>
+
+      <div class="tips">
+        <p><strong>Controles:</strong> Mouse o flechas para mover el guardián. Espacio para activar el pulso.</p>
+        <p><strong>Pulso temporal:</strong> ralentiza meteoros durante 2 segundos. Recarga con una racha de 10 esquivas.</p>
+      </div>
+    </section>
+  </div>
+
+  <main class="arena">
+    <canvas id="gameCanvas" width="900" height="600"></canvas>
+    <div class="overlay" id="overlay">
+      <div>
+        <h2 id="overlayTitle">Misión preparada</h2>
+        <p id="overlayText">Inicia la misión y mantén el núcleo a salvo el mayor tiempo posible.</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
